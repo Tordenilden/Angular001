@@ -1,0 +1,24 @@
+<p>my-first works!</p>
+
+{{variableName}}
+variableName
+<br><br><br>
+{{data2}}
+
+{{stringArr}}
+
+<p *ngFor="let item of stringArr"   >{{item}}</p>
+
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+
+<ul>
+  <li *ngFor="let movieObject of movies">
+    {{movieObject.title}} - {{movieObject.director}}
+  </li>
+</ul>
+
+<button (click)="methodName()">click me</button>
