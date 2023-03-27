@@ -10,13 +10,16 @@ import { PersonComponent } from './components/person/person.component';
 // API "Access"
 import { HttpClientModule } from '@angular/common/http';
 
+import { SeatsComponent } from './components/seats/seats.component';
+
 
 @NgModule({
   declarations: [ // this is all our components
     AppComponent,
     MyFirstComponent,
     MovieComponent,
-    PersonComponent
+    PersonComponent,
+    SeatsComponent
   ],
   imports: [ // modules and similar is registrated here
     BrowserModule,

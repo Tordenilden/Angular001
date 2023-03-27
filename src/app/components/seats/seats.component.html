@@ -1,0 +1,11 @@
+<p>seats works!</p>
+
+<span *ngFor="let item of seatList; index as i">
+  <!-- <button>{{item.seatId}}</button> -->
+  <br *ngIf="i%5==0">
+  <button *ngIf="item.selection==1" class="green" (click)="choosed(item)" >{{item.seatId}}</button>
+  <button *ngIf="item.selection==2" class="reserved">{{item.seatId}}</button>
+  <button *ngIf="item.selection==3" class="red" (click)="choosed(item)" >{{item.seatId}}</button>
+  <!-- {{i}} -->
+
+</span>

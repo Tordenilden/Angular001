@@ -1,0 +1,17 @@
+
+button{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 2px;
+}
+.green{
+  background-color: #19862c;
+}
+
+.reserved{
+  background-color: rgb(162, 153, 153);
+}
+
+.red{
+  background-color: rgb(189, 34, 109);
+}

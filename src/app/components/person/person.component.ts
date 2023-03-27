@@ -29,15 +29,38 @@ ngOnInit(){
   //version 1
   // console.log(this.getPersonsHardcoded());
   // this.personList = this.getPersonsHardcoded();
-  //version 2 - data from service
-  //this.personList = this.personService.getPersonsHardcode();
+  // //version 2 - data from service
+  // this.personList = this.personService.getPersonsHardcode();
 
-  //version 3 - from an API
-  this.personService.getPersons().subscribe(
-    (data)=>{console.log(data);
-    }
-  )
-  this.createPerson();
+  // //version 3 - from an API
+  // this.personService.getPersons().subscribe(
+  //   (data)=>{console.log(data);
+  //     this.personList=data;
+  //   })
+  // this.createPerson();
+
+  // //getByID
+  // this.personService.getPersonById(1).subscribe(
+  //   (data)=>{console.log(data);
+  //   }
+  // );
+  localStorage.setItem("token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
+  localStorage.setItem("name22","Erik");
+  console.log(localStorage.getItem("token"));
+
+  let name:string[]=["Valbon","Yrsa the Great"]; // [] array
+  let something:Person[]=[
+   //{id:1,age:5,name:"Gorm the fatty one",mail:"some text"}
+  {id:3,age:55,name:"Eric the barbarian"}
+];
+
+// this is a jagged array
+let hje=[{id:3,names:"something"},{id:3,name:"something", mail:"balbalabl", phil:"the great"}]// typescript is javascript....
+
+
+// [] array
+  //let obj : any = {write some values or some properties in an obj}// obj
+  // name[1]
 }
 
 getPersonsHardcoded():Person[]{
@@ -47,7 +70,7 @@ getPersonsHardcoded():Person[]{
     {id:1,name:'Hansi i nisseland',age:25}
   ];
 }
-getPersons(){
+getPersonById(){
   // this gets data from service / API
 }
 createPerson():void{

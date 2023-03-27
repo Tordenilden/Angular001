@@ -52,6 +52,18 @@ export class PersonService {
     return this.http.post<Person>(`${this.baseURL2}Person`,personToCreate,httpOptions);
   }
 
+  // https://localhost:7062/api/Person/GetPersonById?id=1
   // tjek lige data hvad der sker hvis i en variabel...
-
+  // getPersonById(personId:number):Observable<Person>{
+  //   // let aaa : Observable<Person> = this.http.get<Person>('https://localhost:7062/api/Person/GetPersonById?id=1');
+  //   // console.log(aaa);
+  //   // når vi skriver data ud... har vi så modtaget data??
+  //   return this.http.get<Person>('https://localhost:7062/api/Person/GetPersonById?id=1');
+  // }
+  getPersonById(personId:number):Observable<Person>{
+    // let aaa : Observable<Person> = this.http.get<Person>('https://localhost:7062/api/Person/GetPersonById?id=1');
+    // console.log(aaa);
+    // når vi skriver data ud... har vi så modtaget data??
+    return this.http.get<Person>(`${this.baseURL2}Person/GetPersonById?id=${personId}`);
+  }
 }
