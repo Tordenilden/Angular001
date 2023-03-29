@@ -1,0 +1,14 @@
+<p>customer-request works!</p>
+
+<!-- [] is a property - its a binding to something -->
+<form [formGroup]="customer">
+<label>AccountId</label><input type="number" formControlName="accountId">
+<label>firstName</label><input type="text" formControlName="firstName">
+<label>lastName</label><input type="text" formControlName="lastName">
+<label>address</label><input type="text" formControlName="address">
+<label>phoneNumber</label><input type="number" formControlName="phoneNumber">
+<button type="submit" (click)="reactiveForms()" [disabled]="!customer.valid">click me Tarzan</button>
+
+
+</form>
+

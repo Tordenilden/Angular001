@@ -11,6 +11,10 @@ import { PersonComponent } from './components/person/person.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SeatsComponent } from './components/seats/seats.component';
+import { CustomerRequestComponent } from './components/customer-request/customer-request.component';
+
+//reactive forms
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,12 +23,15 @@ import { SeatsComponent } from './components/seats/seats.component';
     MyFirstComponent,
     MovieComponent,
     PersonComponent,
-    SeatsComponent
+    SeatsComponent,
+    CustomerRequestComponent
   ],
   imports: [ // modules and similar is registrated here
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,  // reactive forms
+    ReactiveFormsModule  // reactive forms
   ],
   providers: [], // kinda directives, I think some examples come later
   bootstrap: [AppComponent] // this is what is bootstrapped - what is started
